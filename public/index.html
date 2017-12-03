@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>chat online</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <h2 class="title">welcome to chat onlie</h2>
+  <div class="content">
+    <div class="content-left">
+      <p class="room-name" id="currentRoom"></p>
+      <ul class="chat-panel">
+
+      </ul>
+      <input type="text" id="msg-input" name="msg-input">
+      <button id="submit">submit</button>
+      <div class="help">
+        <h4>chat commands</h4>
+        <ul>
+          <li>Change your name: <code>/nick [username]</code></li>
+          <li>Join/create room: <code>/join [room name]</code></li>
+        </ul>
+      </div>
+    </div>
+    <div class="content-right">
+      <ul class="room-list" id="room-list">
+      </ul>
+    </div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+  <script src="./js/chat_core.js"></script>
+  <script src="./js/chat_ui.js"></script>
+  <script src="./js/chat.js"></script>
+</body>
+</html>
